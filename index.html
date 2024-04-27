@@ -124,7 +124,7 @@ Join Our Team: Apply Now!<br></p>
         var phone = document.sample.phone.value;
         var email = document.sample.Email.value;
         var url = document.sample.url.value;
-        var myfile = document.sample.myfile.value;
+        var myfile = document.getElementById("myfile").files[0].name;
 
         // Create a new student object
         var student = {
@@ -158,7 +158,9 @@ Join Our Team: Apply Now!<br></p>
             row.insertCell().textContent = student.phone;
             row.insertCell().textContent = student.email;
             row.insertCell().textContent = student.url;
-            row.insertCell().textContent = student.myfile;
+             var filename = student.myfile.split("\\").pop(); // Extract filename without path
+row.insertCell().textContent = filename;
+
 
             row.insertCell().innerHTML = '<input type="button" value="Apply Now" onclick="submitForm(this);" class="custom-button">';
         });
