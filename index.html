@@ -84,7 +84,7 @@ Join Our Team: Apply Now!</p>
     <label for="myfile">Attach your CV:</label>
     <input type="file" id="myfile" name="myfile"><br><br>
 
-    <input type="button" name="submit" value="SUBMIT" onclick="addStudent();" class="custom-button"><hr>
+    <input type="button" name="submit" value="Apply Now" onclick="addStudent();" class="custom-button"><hr>
     <table id="tbl" class="table" border="1">
         <thead>
         <th>Name</th>
@@ -96,7 +96,7 @@ Join Our Team: Apply Now!</p>
         <th>Email</th>
         <th>URL</th>
         <th>CV</th>
-        <th>Submit</th>
+        <th>Apply Now</th>
         </thead>
         <tbody>
         </tbody>
@@ -158,7 +158,7 @@ Join Our Team: Apply Now!</p>
             row.insertCell().textContent = student.url;
             row.insertCell().textContent = student.myfile;
 
-            row.insertCell().innerHTML = '<input type="button" value="Submit" onclick="submitForm(this);" class="custom-button">';
+            row.insertCell().innerHTML = '<input type="button" value="Apply Now" onclick="submitForm(this);" class="custom-button">';
         });
     }
 
